@@ -3,6 +3,7 @@ import { CompilerError } from '../errors'
 import { ParserContext } from '../parse'
 import { TransformContext } from '../transform'
 
+/**Partial就是让一个定义中的所有属性都变成可选参数，参数可以变多也可以少 */
 export type CompilerCompatConfig = Partial<
   Record<CompilerDeprecationTypes, boolean | 'suppress-warning'>
 > & {

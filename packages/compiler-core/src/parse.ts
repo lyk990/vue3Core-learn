@@ -89,6 +89,10 @@ export const enum TextModes {
   ATTRIBUTE_VALUE
 }
 
+/**
+ * NonNullable 类型是TypeScript 中
+ * 的一种实用类型，它创建一个新类型，同时删除所有null 或未定义的元素
+ */
 export interface ParserContext {
   options: MergedParserOptions
   readonly originalSource: string

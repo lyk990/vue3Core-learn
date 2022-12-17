@@ -83,7 +83,8 @@ export const helperNameMap: Record<symbol, string> = {
   [WITH_MEMO]: `withMemo`,
   [IS_MEMO_SAME]: `isMemoSame`
 }
-
+// Object.getOwnPropertySymbols() 
+// 方法返回一个给定对象自身的所有 Symbol 属性的数组。
 export function registerRuntimeHelpers(helpers: Record<symbol, string>) {
   Object.getOwnPropertySymbols(helpers).forEach(s => {
     helperNameMap[s] = helpers[s]
