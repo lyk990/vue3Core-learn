@@ -37,8 +37,6 @@
   },
   "types": "test-dts/index.d.ts",
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged",
-    "commit-msg": "node scripts/verifyCommit.mjs"
   },
   "lint-staged": {
     "*.{js,json}": [
