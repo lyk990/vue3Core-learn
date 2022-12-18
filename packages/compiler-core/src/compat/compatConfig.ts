@@ -13,7 +13,7 @@ export type CompilerCompatConfig = Partial<
 export interface CompilerCompatOptions {
   compatConfig?: CompilerCompatConfig
 }
-
+/**兼容性配置枚举 */
 export const enum CompilerDeprecationTypes {
   COMPILER_IS_ON_ELEMENT = 'COMPILER_IS_ON_ELEMENT',
   COMPILER_V_BIND_SYNC = 'COMPILER_V_BIND_SYNC',
