@@ -113,7 +113,7 @@ function getCompatValue(
     return value
   }
 }
-
+/**是否兼容 */
 export function isCompatEnabled(
   key: CompilerDeprecationTypes,
   context: ParserContext | TransformContext
