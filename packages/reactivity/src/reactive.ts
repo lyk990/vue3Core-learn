@@ -14,11 +14,11 @@ import {
 import type { UnwrapRefSimple, Ref, RawSymbol } from './ref'
 
 export const enum ReactiveFlags {
-  SKIP = '__v_skip',
+  SKIP = '__v_skip', // 跳过代理
   IS_REACTIVE = '__v_isReactive',
   IS_READONLY = '__v_isReadonly',
   IS_SHALLOW = '__v_isShallow',
-  RAW = '__v_raw'
+  RAW = '__v_raw' // 取原始对象
 }
 
 export interface Target {
@@ -178,9 +178,10 @@ export function shallowReadonly<T extends object>(target: T): Readonly<T> {
     shallowReadonlyMap
   )
 }
-
-// 创建proxy对象
-// 监听用户get或者set的动作
+/**
+ * 创建proxy对象
+ * 监听用户get或者set的动作
+ */
 function createReactiveObject(
   target: Target,
   isReadonly: boolean,

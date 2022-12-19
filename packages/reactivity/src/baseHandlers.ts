@@ -91,7 +91,7 @@ function hasOwnProperty(key: string) {
   track(obj, TrackOpTypes.HAS, key)
   return obj.hasOwnProperty(key)
 }
-// createGetter
+
 function createGetter(isReadonly = false, shallow = false) {
   return function get(target: Target, key: string | symbol, receiver: object) {
     if (key === ReactiveFlags.IS_REACTIVE) {
