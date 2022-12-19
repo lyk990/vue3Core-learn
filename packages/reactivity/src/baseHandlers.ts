@@ -125,7 +125,7 @@ function createGetter(isReadonly = false, shallow = false) {
         return hasOwnProperty
       }
     }
-
+    // 将属性值返回出去 {foo：1} foo -> 1
     const res = Reflect.get(target, key, receiver)
 
     if (isSymbol(key) ? builtInSymbols.has(key) : isNonTrackableKeys(key)) {
@@ -159,8 +159,8 @@ function createGetter(isReadonly = false, shallow = false) {
 const set = /*#__PURE__*/ createSetter()
 const shallowSet = /*#__PURE__*/ createSetter(true)
 
-// createSetter
 function createSetter(shallow = false) {
+  // 重新设置值
   return function set(
     target: object,
     key: string | symbol,
