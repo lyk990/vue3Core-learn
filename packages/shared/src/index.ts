@@ -30,7 +30,7 @@ const onRE = /^on[^a-z]/
 export const isOn = (key: string) => onRE.test(key)
 
 export const isModelListener = (key: string) => key.startsWith('onUpdate:')
-
+/**Object.assign */
 export const extend = Object.assign
 
 export const remove = <T>(arr: T[], el: T) => {

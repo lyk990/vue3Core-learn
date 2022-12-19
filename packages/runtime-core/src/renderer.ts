@@ -1139,8 +1139,8 @@ function baseCreateRenderer(
   }
 
   const processComponent = (
-    n1: VNode | null,
-    n2: VNode,
+    n1: VNode | null, // 之前的值
+    n2: VNode,        // 当前的值
     container: RendererElement,
     anchor: RendererNode | null,
     parentComponent: ComponentInternalInstance | null,
