@@ -282,6 +282,7 @@ export const queuePostRenderEffect = __FEATURE_SUSPENSE__
  *
  * Custom renderers can pass in the platform specific types like this:
  *
+ * 实现vue3的runtime-core的核心，不只是仅仅的渲染到dom上，还可以渲染到canvas,webview等指定的平台
  * ``` js
  * const { render, createApp } = createRenderer<Node, Element>({
  *   patchProp,
