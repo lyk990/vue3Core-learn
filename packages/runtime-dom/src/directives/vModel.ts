@@ -271,7 +271,7 @@ export const vModelDynamic: ObjectDirective<
     callModelHook(el, binding, vnode, prevVNode, 'updated')
   }
 }
-
+/**判断是组件还是元素 */
 function resolveDynamicModel(tagName: string, type: string | undefined) {
   switch (tagName) {
     case 'SELECT':
