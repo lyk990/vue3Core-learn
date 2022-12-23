@@ -351,6 +351,7 @@ function baseCreateRenderer(
 
   // Note: functions inside this closure should use `const xxx = () => {}`
   // style in order to prevent being inlined by minifiers.
+  /**处理组件的虚拟节点 */
   const patch: PatchFn = (
     n1,
     n2,
@@ -1138,7 +1139,7 @@ function baseCreateRenderer(
       }
     }
   }
-
+  /**接收组件的虚拟节点 */
   const processComponent = (
     n1: VNode | null, // 之前的值
     n2: VNode,        // 当前的值
@@ -1175,7 +1176,7 @@ function baseCreateRenderer(
       updateComponent(n1, n2, optimized)
     }
   }
-
+  /**createApp 挂载组件 */
   const mountComponent: MountComponentFn = (
     initialVNode,
     container,
@@ -2311,7 +2312,7 @@ function baseCreateRenderer(
     }
     return hostNextSibling((vnode.anchor || vnode.el)!)
   }
-
+  // render 
   const render: RootRenderFunction = (vnode, container, isSVG) => {
     if (vnode == null) {
       if (container._vnode) {

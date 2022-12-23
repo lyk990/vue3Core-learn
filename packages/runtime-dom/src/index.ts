@@ -62,7 +62,7 @@ export const render = ((...args) => {
 export const hydrate = ((...args) => {
   ensureHydrationRenderer().hydrate(...args)
 }) as RootHydrateFunction
-
+// createApp
 export const createApp = ((...args) => {
   const app = ensureRenderer().createApp(...args)
 

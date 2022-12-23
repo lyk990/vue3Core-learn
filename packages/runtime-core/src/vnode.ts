@@ -499,11 +499,11 @@ function createBaseVNode(
 }
 
 export { createBaseVNode as createElementVNode }
-
+// createApp  component转换成虚拟节点
 export const createVNode = (
   __DEV__ ? createVNodeWithArgsTransform : _createVNode
 ) as typeof _createVNode
-
+// createVNode
 function _createVNode(
   type: VNodeTypes | ClassComponent | typeof NULL_DYNAMIC_COMPONENT,
   props: (Data & VNodeProps) | null = null,

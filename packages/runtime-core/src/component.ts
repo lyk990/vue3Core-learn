@@ -472,7 +472,7 @@ export interface ComponentInternalInstance {
 const emptyAppContext = createAppContext()
 
 let uid = 0
-
+/**创建组件实例化对象 */
 export function createComponentInstance(
   vnode: VNode,
   parent: ComponentInternalInstance | null,
