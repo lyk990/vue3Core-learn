@@ -351,7 +351,7 @@ function baseCreateRenderer(
 
   // Note: functions inside this closure should use `const xxx = () => {}`
   // style in order to prevent being inlined by minifiers.
-  /**处理组件的虚拟节点 */
+  /**对比新旧虚拟dom，来更新dom */
   const patch: PatchFn = (
     n1,
     n2,
